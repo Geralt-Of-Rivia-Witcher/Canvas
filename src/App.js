@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 import Home from "./Page/Home/Home.jsx";
@@ -55,7 +55,7 @@ function App() {
                         path="/final"
                         element={<Final innerHtml={innerHtml} />}
                     />
-                    <Route path="*" element={<Home />} />
+                    <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
             </BrowserRouter>
         </div>
